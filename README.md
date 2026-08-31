@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NoteHub
 
-## Getting Started
+NoteHub — застосунок для створення, пошуку, перегляду та видалення особистих нотаток. Проєкт перенесено з React/Vite на Next.js із використанням App Router.
 
-First, run the development server:
+## Функціональність
+
+- головна сторінка з описом застосунку;
+- список нотаток із пошуком і пагінацією;
+- створення та видалення нотаток;
+- сторінка деталей окремої нотатки;
+- обробка станів завантаження та помилок;
+- серверний prefetch даних і hydration кешу TanStack Query.
+
+## Маршрути
+
+| Маршрут       | Призначення                                   |
+| ------------- | --------------------------------------------- |
+| `/`           | Головна сторінка NoteHub                      |
+| `/notes`      | Список, пошук, створення та видалення нотаток |
+| `/notes/[id]` | Детальна інформація про одну нотатку          |
+
+## Технології
+
+- Next.js 16 та React 19;
+- TypeScript;
+- TanStack Query;
+- Axios;
+- Formik і Yup;
+- CSS Modules;
+- Prettier та ESLint.
+
+## Встановлення і запуск
+
+1. Клонуйте репозиторій:
+
+   ```bash
+   git clone https://github.com/Dmytro777-lab/06-notehub-nextjs.git
+   ```
+
+2. Перейдіть у папку проєкту та встановіть залежності:
+
+   ```bash
+   cd 06-notehub-nextjs
+   npm install
+   ```
+
+3. Створіть у корені файл `.env` і додайте токен API:
+
+   ```env
+   NEXT_PUBLIC_NOTEHUB_TOKEN=ваш_токен
+   ```
+
+4. Запустіть застосунок у режимі розробки:
+
+   ```bash
+   npm run dev
+   ```
+
+Відкрийте [http://localhost:3000](http://localhost:3000).
+
+## Команди
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev          # запуск у режимі розробки
+npm run lint         # перевірка ESLint
+npm run format        # форматування Prettier
+npm run format:check # перевірка форматування
+npm run build        # production-збірка
+npm run start        # запуск production-версії
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Автор
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Dmytro Dorofeyev
